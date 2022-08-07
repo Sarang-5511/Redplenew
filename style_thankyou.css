@@ -1,0 +1,186 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+#section1 {
+  padding: 25px 27px;
+}
+
+/* navbar code */
+.home {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  width: 85%;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.nav-link:hover {
+  color: #475569;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+.thankbox {
+  margin: auto;
+  text-align: center;
+  max-width: 1170px;
+}
+.thankbox img {
+  height: 350px;
+}
+.thankcontent h2 {
+  padding: 20px 0;
+}
+.thankcontent p {
+  margin: auto;
+  /* text-align: center; */
+  width: 35%;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 940px) {
+  #section1 {
+    padding: 50px 5px;
+    vertical-align: middle;
+  }
+  /* navbar responsive */
+  .nav-menu {
+    z-index: 9999;
+
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .nav-link {
+    color: white;
+  }
+  .nav-menu.active {
+    left: 0;
+    padding-left: 0;
+  }
+
+  .nav-item {
+    margin-bottom: 30px;
+    margin-left: 0;
+    color: white;
+  }
+  .navbut {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    height: 3rem;
+    width: 9.5rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: rgba(41, 39, 39, 0.35) 0px 5px 10px;
+    transition: all 0.2s ease-in;
+  }
+  .navbut:hover {
+    color: black;
+    box-shadow: 0px 5px 5px rgb(243, 195, 181);
+    background-color: #ffffff;
+    transform: translateY(-5px);
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /* nabar ends */
+  .thankbox {
+    margin: auto;
+    text-align: center;
+
+    max-width: 1170px;
+    padding: 10px;
+  }
+  .thankbox img {
+    height: 270px;
+    width: 80%;
+  }
+  .thankcontent h2 {
+    padding: 20px 0;
+    font-size: 22px;
+  }
+  .thankcontent p {
+    margin: auto;
+    /* text-align: center; */
+    width: 100%;
+    font-size: 15px;
+  }
+}
